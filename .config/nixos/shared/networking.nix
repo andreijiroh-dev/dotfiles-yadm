@@ -1,13 +1,13 @@
-{ ... }:
+{ config, pkgs, lib, ... }:
 
 {
   # Do a lot of systemd-resolved related chores
-  networking.nameservers = [
+  config.networking.nameservers = [
     "45.90.28.0#c393f6.dns.nextdns.io"
     "45.90.30.0#c393f6.dns.nextdns.io"
   ];
   
-  services.resolved = {
+  config.services.resolved = {
     enable = true;
     dnssec = "false"; # https://superuser.com/a/1493674
     domains = [ "~." "fawn-cod.ts.net" ];

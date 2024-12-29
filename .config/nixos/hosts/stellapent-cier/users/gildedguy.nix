@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ config, pkgs, lib, ... }:
 
 let
   vscExts = (import ../../../shared/vscode-extensions.nix) {

@@ -1,0 +1,46 @@
+# SPDX-License-Identifier: MPL-2.0
+# To use thhis configuration, you must have nix4vscode installed, either
+# via "cargo build" or good old "nix develop" from a local clone of the
+# tooling's sources.
+
+# TODO: Bump this on every VS Code release here.
+vscode_version = "1.96.0"
+
+## theming
+[[extensions]]
+publisher_name = "pkief"
+extension_name = "material-icon-theme"
+[[extensions]]
+publisher_name = "pkief"
+extension_name = "material-product-icons"
+[[extensions]]
+publisher_name = "github"
+extension_name = "github-vscode-theme"
+
+# utils
+[[extensions]]
+publisher_name = "wakatime"
+extension_name = "vscode-wakatime"
+[[extensions]]
+publisher_name = "doppler"
+extension_name = "doppler-vscode"
+[[extensions]]
+publisher_name = "eamodio"
+extension_name = "gitlens"
+[[extensions]]
+publisher_name = "vivaxy"
+extension_name = "vscode-conventional-commits"
+
+# programming languages + IntelliSense
+[[extensions]]
+publisher_name = "denoland"
+extension_name = "vscode-deno"
+[[extensions]]
+publisher_name = "jnoortheen"
+extension_name = "nix-ide"
+[[extensions]]
+publisher_name = "redhat"
+extension_name = "vscode-yaml"
+[[extensions]]
+publisher_name = "unifiedjs"
+extension_name = "vscode-mdx"

@@ -2,20 +2,20 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
     [
       ./hardware-configuration.nix
-      
-      # We're also importing them below just in case
+      ../../shared/meta-configs.nix
       ../../shared/networking.nix
-      ../../shared/locale.nix
       ../../shared/firewall.nix
-      ../../shared/kde-plasma.nix
+      ../../shared/tailscale.nix
       ../../shared/ssh.nix
-      ../../shared/vscode-extensions.nix
+      ../../shared/locale.nix
+      ../../shared/kde-plasma.nix
+      ../../shared/bluetooth.nix
     ];
 
   # Bootloader.
@@ -46,7 +46,14 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  #hardware.pulseaudio = {
+  #  enable = true;
+  #  package = pkgs.pulseaudioFull;
+  #};
+  #hardware.pulseaudio.extraConfig = "
+  #  load-module module-switch-on-connect
+  #";
+
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;

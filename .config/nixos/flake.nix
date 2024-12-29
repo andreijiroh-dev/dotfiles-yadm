@@ -35,12 +35,6 @@
           determinate.nixosModules.default
           vscode-server.nixosModules.default
           home-manager.nixosModules.home-manager
-          ./shared/networking.nix
-          ./shared/locale.nix
-          ./shared/firewall.nix
-          ./shared/kde-plasma.nix
-          ./shared/ssh.nix
-          ./shared/tailscale.nix
           ./hosts/stellapent-cier/configuration.nix
         ];
       };

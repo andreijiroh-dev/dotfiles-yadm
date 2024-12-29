@@ -1,6 +1,6 @@
 # This is the meta config file for nixpkgs and nix cli
 
-{ ... }:
+{ config, pkgs, lib, ... }:
 
 {
   # Adopted from https://fnordig.de/til/nix/home-manager-allow-unfree.html,

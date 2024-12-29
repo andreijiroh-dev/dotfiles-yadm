@@ -2,12 +2,12 @@
 # in NixOS, mostly on the side of the daemon and its related
 # configurations.
 
-{ ... }:
+{ config, pkgs, lib, ... }:
 
 {
   services.tailscale = {
     enable = true;
-    useRoutingFeatures = true;
+    useRoutingFeatures = "both";
     openFirewall = true;
     disableTaildrop = false;
     extraDaemonFlags = [
